@@ -1,14 +1,18 @@
-import React, { ComponentProps } from 'react'
+import React, { useState } from 'react';
+import GameTypes from '../types/gameTypes';
+import SelectGameType from './Setup/SelectGametype';
 
+function Setup() {
+    const [selectedGameType, setSelectedGameType] = useState<GameTypes>(GameTypes.PITCH_AND_PUTT);
 
-function Setup () {
     return (
         <div>
-            <h1>
-                Setup Component Base
-            </h1>
+            <SelectGameType
+                selectedGameType={selectedGameType}
+                setSelectedGameType={setSelectedGameType}
+            />
         </div>
-    )
+    );
 }
 
 export default Setup;

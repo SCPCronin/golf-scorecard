@@ -9,8 +9,8 @@ interface SelectGameTypeProps {
 
 function SelectGameType({ selectedGameType, setSelectedGameType }: SelectGameTypeProps) {
 
-    const handleSelectGameTypeChange = (event: SelectChangeEvent<GameTypes>) => {
-        setSelectedGameType(event.target.value as GameTypes);
+  const handleSelectGameTypeChange = (event: SelectChangeEvent<GameTypes>) => {
+    setSelectedGameType(event.target.value as GameTypes);
     };
 
     return (

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Player from './Player';
+import { Box } from '@mui/material';
 
 function AllPlayers() {
     
@@ -13,13 +14,15 @@ function AllPlayers() {
 
     return (
         <div>
-            {playerNames.map((playerName, index) => (
-                <Player
-                    key={index}
-                    playerName={playerName}
-                    setPlayerName={(newName) => handlePlayerNameChange(index, newName)}
-                />
-            ))}
+            <Box style={{width: "25%"}}>
+                {playerNames.map((playerName, index) => (
+                    <Player
+                        key={index}
+                        playerName={playerName}
+                        setPlayerName={(newName) => handlePlayerNameChange(index, newName)}
+                    />
+                ))}
+            </Box>
         </div>
     );
 }

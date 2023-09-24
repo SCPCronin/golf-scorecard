@@ -24,8 +24,14 @@ function App() {
           setSelectedCourse={setSelectedCourse}
           playerNames={playerNames}
           setPlayerNames={setPlayerNames}
-
-        /> : <h1> Game Component not created yet. </h1>}
+        /> : 
+        <div>
+          <h1> Game Component not created yet. </h1>
+          <p> Selected Game type: {selectedGameType}</p>
+          <p> Selected Course {selectedCourse} </p>
+          <p> Player Names: {playerNames}</p>
+        </div>
+        }
     </div>
   );
 }

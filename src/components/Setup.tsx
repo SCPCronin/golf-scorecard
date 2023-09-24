@@ -4,6 +4,7 @@ import SelectGameType from './Setup/Select_Gametype';
 import SelectCourse from './Setup/Select_Course'
 import Courses from '../types/Courses';
 import AllPlayers from './Setup/AllPlayers';
+import Buttons from './Setup/Buttons'
 import { Box, Button, Typography } from '@mui/material';
 import '../styles/setup.css';
 
@@ -43,10 +44,7 @@ function Setup({setIsSetupMode, selectedGameType, setSelectedGameType, selectedC
                     />
                 }
                 <AllPlayers playerNames={playerNames} setPlayerNames={setPlayerNames}/>
-                <Box>
-                    <Button id="ResetButton" variant="contained" onClick={resetState}> Clear State </Button>
-                    <Button id="StartGameButton" variant="contained" onClick={startGame}> Start Game </Button>
-                </Box>
+                <Buttons resetState={resetState} startGame={startGame} /> 
             </Box>
         </div>
     );

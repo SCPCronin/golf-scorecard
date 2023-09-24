@@ -18,7 +18,7 @@ function Player({playerName, setPlayerName}: PlayerProps) {
             onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                 setPlayerName(event.target.value);
             }}
-            style={{marginTop: "25px"}}
+            style={{marginTop: "20px"}}
         />
     )
 }

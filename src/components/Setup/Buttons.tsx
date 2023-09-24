@@ -1,5 +1,5 @@
 import { Box, Button } from '@mui/material'
-import React from 'react'
+import "../../styles/setup.css"
 
 interface ButtonsProps {
     resetState: () => void;
@@ -9,9 +9,9 @@ interface ButtonsProps {
 function Buttons ({resetState, startGame}: ButtonsProps) {
 
     return (
-        <Box display="flex" justifyContent="space-between" style={{marginTop: "5%"}}>
-            <Button id="ResetButton" variant="contained" onClick={resetState} style={{marginLeft: "15%"}}> Clear State </Button>
-            <Button id="StartGameButton" variant="contained" onClick={startGame} style={{marginRight: "15%"}}> Start Game </Button>
+        <Box id="ButtonsBox">
+            <Button id="ResetButton" variant="contained" onClick={resetState}> Clear State </Button>
+            <Button id="StartGameButton" variant="contained" onClick={startGame}> Start Game </Button>
         </Box>
     )
 

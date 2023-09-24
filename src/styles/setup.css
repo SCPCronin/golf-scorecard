@@ -36,3 +36,17 @@
 .SelectCourseBox > * {
     width: 100%;
 }
+
+#ButtonsBox {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#ResetButton {
+    margin-left: 15%;
+}
+
+#StartGameButton {
+    margin-right: 15%
+}

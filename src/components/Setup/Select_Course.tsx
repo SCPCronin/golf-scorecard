@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Select, MenuItem, SelectChangeEvent, FormControl, InputLabel } from '@mui/material';
+import { Select, MenuItem, SelectChangeEvent, FormControl, Typography, Box } from '@mui/material';
 import COURSE_NAMES from '../../types/Courses';
 
 interface SelectCourseProps {
@@ -14,16 +14,16 @@ function SelectCourse({ selectedCourse, setSelectedCourse }: SelectCourseProps) 
     };
 
     return (
-        <div>
-            <FormControl style={{ marginTop: '50px' }}>
-                <InputLabel htmlFor="select-course-label">Select a Course</InputLabel>
+        <Box className="SelectCourseBox">
+            <Typography className="SetupHeader" variant="h4" gutterBottom>
+                Select Course
+            </Typography>
+            <FormControl>
                 <Select
                     labelId="select-course-label"
                     id="select-course"
                     value={selectedCourse}
-                    onChange={handleSelectCourseChange}
-                    style={{ width: '200px', marginTop: '10px' }}
-                >
+                    onChange={handleSelectCourseChange}                >
                     {Object.values(COURSE_NAMES).map((course) => (
                         <MenuItem value={course}>
                             {course}
@@ -31,7 +31,7 @@ function SelectCourse({ selectedCourse, setSelectedCourse }: SelectCourseProps) 
                     ))}
                 </Select>
             </FormControl>
-        </div>
+        </Box>
     );
 }
 

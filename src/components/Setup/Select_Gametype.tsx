@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Select, MenuItem, SelectChangeEvent, FormControl, InputLabel } from '@mui/material';
+import { Select, MenuItem, SelectChangeEvent, FormControl, Typography, Box } from '@mui/material';
 import GameTypes from '../../types/gameTypes';
 
 interface SelectGameTypeProps {
@@ -14,16 +14,17 @@ function SelectGameType({ selectedGameType, setSelectedGameType }: SelectGameTyp
     };
 
     return (
-        <div>
-            <FormControl style={{ marginTop: '50px' }}>
-                <InputLabel htmlFor="select-gametype-label">Select a Gametype</InputLabel>
+        <Box className="SelectGameTypeBox">
+            <Typography className="SetupHeader" variant="h4" gutterBottom>
+                Select Game
+            </Typography>
+            <FormControl>
                 <Select
                     labelId="select-gametype-label"
                     id="select-gametype"
                     value={selectedGameType}
                     onChange={handleSelectGameTypeChange}
-                    style={{ width: '200px', marginTop: '10px' }}
-                >
+                    >
                     {Object.values(GameTypes).map((gameType) => (
                         <MenuItem key={gameType} value={gameType}>
                             {gameType}
@@ -31,7 +32,7 @@ function SelectGameType({ selectedGameType, setSelectedGameType }: SelectGameTyp
                     ))}
                 </Select>
             </FormControl>
-        </div>
+        </Box>
     );
 }
 

@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import Player from './Player';
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
+import "../../styles/setup.css"
 
-function AllPlayers() {
-    
-    const [playerNames, setPlayerNames] = useState<string[]>(["", "", "", ""]);
+interface AllPlayersProps {
+    playerNames: string[]
+    setPlayerNames: React.Dispatch<React.SetStateAction<string[]>>;
+}
+
+function AllPlayers({playerNames, setPlayerNames}: AllPlayersProps) {
     
     const handlePlayerNameChange = (index: number, newName: React.SetStateAction<string>) => {
         const updatedPlayerNames = [...playerNames];
@@ -14,7 +18,10 @@ function AllPlayers() {
 
     return (
         <div>
-            <Box style={{width: "25%"}}>
+            <Typography className="SetupHeader" variant="h4" gutterBottom>
+                Enter Player Names
+            </Typography>            
+            <Box className="AllPlayersBox">
                 {playerNames.map((playerName, index) => (
                     <Player
                         key={index}

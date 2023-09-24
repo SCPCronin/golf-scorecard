@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Select, MenuItem, SelectChangeEvent, FormControl, Typography, Box } from '@mui/material';
 import COURSE_NAMES from '../../types/Courses';
 

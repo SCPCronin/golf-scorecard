@@ -1,0 +1,52 @@
+.SetupBox {
+    display: block;
+    align-items: center; /* Vertically center the content */
+    height: 100vh; /* This centers the container vertically within the viewport */
+    border: 1px solid black; /* Thin black border */
+    border-radius: 10px;
+    padding: 20px; /* Add padding for spacing */
+    margin: 20px;
+}
+
+.SetupHeader {
+    display: flex;
+    align-items: center; /* Center horizontally */
+}
+
+.AllPlayersBox > * {
+    margin-top: 25px;
+    width: 100%;
+}
+
+.SelectGameTypeBox {
+    margin-bottom: 5%;
+}
+
+.SelectGameTypeBox > * {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+}
+
+
+.SelectCourseBox {
+    margin-bottom: 5%;
+}
+
+.SelectCourseBox > * {
+    width: 100%;
+}
+
+#ButtonsBox {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#ResetButton {
+    margin-left: 15%;
+}
+
+#StartGameButton {
+    margin-right: 15%
+}
